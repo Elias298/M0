@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
 	if ((32 <= c) && (c <= 126))
 		return (1);
@@ -22,7 +24,7 @@ int main(int argc, char** argv)
 {
 	(void) argc;
 	(void) argv;
-	write(1, "01" + ft_isdigit(argv[1][0]), 1);
+	write(1, "01" + ft_isprint(argv[1][0]), 1);
 	write(1, "\n", 1);
 }
 */

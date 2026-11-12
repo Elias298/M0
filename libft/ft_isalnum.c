@@ -6,17 +6,15 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 01:03:35 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/10 20:07:49 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/12 12:19:23 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	if ((('a' <= c) && (c <= 'z'))
-		|| (('A' <= c) && (c <= 'Z'))
-		|| (('0' <= c) && (c <= '9')))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
 /*
 #include <unistd.h>
@@ -24,7 +22,7 @@ int main(int argc, char** argv)
 {
 	(void) argc;
 	(void) argv;
-	write(1, "01" + ft_isalpha(argv[1][0]), 1);
+	write(1, "01" + ft_isalnum(argv[1][0]), 1);
 	write(1, "\n", 1);
 }
 */
