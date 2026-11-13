@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 18:03:40 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 17:11:49 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:37:52 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	**ft_split(char const *str, char c)
 		{
 			strs[i] = malloc(str - prev + 1);
 			ft_memcpy(strs[i], prev, str - prev);
+			strs[i][str - prev] = 0;
 		}
 		i++;
 	}

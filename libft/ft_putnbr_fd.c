@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 20:28:34 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 22:24:04 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:45:31 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,20 @@ void	putnbr_fd_recur(int n, int fd)
 	if (n == 0)
 		return ;
 	putnbr_fd_recur(n / 10, fd);
-	write(1, nums - (n % 10), fd);
+	write(fd, nums - (n % 10), 1);
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == 0)
 	{
-		write(1, "0", fd);
+		write(fd, "0", 1);
 		return ;
 	}
 	if (n > 0)
 		n *= -1;
 	else
-		write(1, "-", fd);
+		write(fd, "-", 1);
 	putnbr_fd_recur(n, fd);
 }
 /*

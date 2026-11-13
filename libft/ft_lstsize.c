@@ -6,9 +6,11 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 22:49:53 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 22:52:05 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 01:02:07 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

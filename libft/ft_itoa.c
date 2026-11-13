@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 20:28:34 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 20:01:00 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:38:49 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	itoa_recur(int nb, char *buf, int depth)
 
 char	*ft_itoa(int nb)
 {
-	char	buf[11];
+	char	buf[12];
 
-	ft_bzero(buf, 11);
+	ft_bzero(buf, 12);
 	if (nb == 0)
 	{
 		buf[0] = '0';

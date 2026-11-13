@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 15:20:40 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/11 22:56:56 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:04:32 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,26 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
-	int		i;
+	size_t	i;
+	size_t	m;
 
-	i = 0;
-	while (to_find[i] && *str && n)
+	if (! *to_find)
+		return ((char *)(str));
+	while (*str && n)
 	{
-		if (to_find[i] == *str)
+		i = 0;
+		m = n;
+		while (to_find[i] && (str[i] == to_find[i]) && m)
+		{
 			i++;
-		else
-			i = 0;
+			m--;
+		}
+		if (to_find[i] == 0)
+			return ((char *) str);
 		str++;
 		n--;
 	}
-	if (to_find[i])
-		return (0);
-	return ((char *)(str - i));
+	return (0);
 }
 /*
 #include <stdio.h>

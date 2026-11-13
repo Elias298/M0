@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 16:30:40 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/11 17:41:47 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:52:52 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strrchr(const char *s, int c)
 	res = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char) c)
 			res = s;
 		s++;
 	}
+	if ((char) c == 0)
+		return ((char *)s);
 	return ((char *)res);
 }
 /*

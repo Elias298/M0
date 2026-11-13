@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 18:10:27 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 18:35:42 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:29:29 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (i < len)
 	{
-		res[i] = f(i, res[i]);
+		res[i] = f(i, s[i]);
 		i++;
 	}
 	res[i] = 0;

@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 14:11:43 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 18:33:37 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 01:02:35 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static int	contains(char const *set, char c)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*end;
-	char		*res;
 
 	while (contains(set, *s1))
 		s1++;

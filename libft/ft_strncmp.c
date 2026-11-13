@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 12:52:59 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/11 17:46:38 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:07:17 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char s1[], const char s2[], size_t n)
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return (((unsigned char)*s1) - ((unsigned char)*s2));
 }
 /*
 #include <stdio.h>

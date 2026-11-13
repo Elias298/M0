@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 12:52:59 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/11 22:12:02 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 01:06:40 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (*buf1 == *buf2 && --n)
 	{
-		if (*buf1 == 0)
-			return (0);
 		buf1++;
 		buf2++;
 	}

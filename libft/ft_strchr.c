@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 16:30:40 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/11 17:39:35 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 02:52:28 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char) c)
 			return ((char *)s);
 		s++;
 	}
+	if ((char) c == 0)
+		return ((char *)s);
 	return (0);
 }
 /*
+#include <string.h>
 #include <stdio.h>
 int main(int argc, char **argv)
 {
