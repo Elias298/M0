@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 12:48:10 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 03:49:25 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 09:47:34 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > s_len - start)
 		realen = s_len - start;
 	else
-		realen = len;	
+		realen = len;
 	res = malloc(realen + 1);
 	if (res == NULL)
 		return (0);
