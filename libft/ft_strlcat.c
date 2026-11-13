@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 14:43:36 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/11 17:53:07 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:25:09 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	while (src[src_len])
 		src_len++;
 	dst_len = 0;
-	while (dest[dst_len] && dst_len < size)
+	while (dst_len < size && dest[dst_len])
 		dst_len++;
 	i = 0;
 	while (src[i] && i + 1 < size - dst_len)

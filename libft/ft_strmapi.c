@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 18:10:27 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 03:11:34 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:36:03 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	len;
 	unsigned int	i;
 
+	if (! s || ! f)
+		return (NULL);
 	len = ft_strlen(s);
 	res = malloc(len + 1);
 	if (res == NULL)

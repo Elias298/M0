@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 14:11:43 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 03:37:40 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:34:50 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*end;
 
+	if (! s1 || ! set)
+		return (NULL);
 	while (contains(set, *s1))
 		s1++;
 	end = s1;

@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 22:05:02 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 22:06:55 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:37:27 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (! s)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

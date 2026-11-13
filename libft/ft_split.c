@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 18:03:40 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 13:03:25 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:43:25 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	**ft_split(char const *str, char c)
 	char		**strs;
 	size_t		i;
 
+	if (! str)
+		return (NULL);
 	size = get_size(str, c);
 	strs = malloc((size + 1) * sizeof(char *));
 	if (strs == NULL)

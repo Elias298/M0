@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 00:02:13 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 13:01:51 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:18:53 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*p;
 	t_list	hack;
 
-	if (! f || ! del)
+	if (! f)
 		return (NULL);
 	hack.next = NULL;
 	p = &hack;
