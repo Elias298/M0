@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 22:35:43 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 23:56:27 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 12:51:48 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (! new || ! lst)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

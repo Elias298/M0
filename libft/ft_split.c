@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 18:03:40 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 12:27:14 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:03:25 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	del_arrs(char **arr, int n)
 	i = 0;
 	while (i < n)
 		free(arr[i++]);
+	free(arr);
 }
 
 static size_t	get_size(char const *str, char c)
@@ -39,7 +40,7 @@ static size_t	get_size(char const *str, char c)
 	return (size);
 }
 
-bool	append_str(char **strs, size_t i, const char *str, size_t n)
+static bool	append_str(char **strs, size_t i, const char *str, size_t n)
 {
 	strs[i] = malloc(n + 1);
 	if (strs[i] == NULL)
