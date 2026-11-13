@@ -6,7 +6,7 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/12 22:07:56 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 22:15:31 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 13:48:42 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (! s)
+		return ;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
