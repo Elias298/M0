@@ -6,11 +6,10 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 11:45:55 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/12 18:38:51 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 03:11:03 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(const char *s1, const char *s2)
@@ -22,7 +21,9 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	res = malloc(len1 + len2 + 1);
-	ft_memcpy(ft_memcpy(res, s1, len1) + len1, s2, len2 + 1);
+	if (res == NULL)
+		return (NULL);
+	ft_memcpy(((char *)ft_memcpy(res, s1, len1)) + len1, s2, len2 + 1);
 	return (res);
 }
 /*

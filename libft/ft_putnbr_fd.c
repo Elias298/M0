@@ -6,14 +6,14 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 20:28:34 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 02:45:31 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 03:00:27 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void	putnbr_fd_recur(int n, int fd)
+static void	putnbr_fd_recur(int n, int fd)
 {
 	char	*nums;
 
@@ -38,7 +38,6 @@ void	ft_putnbr_fd(int n, int fd)
 	putnbr_fd_recur(n, fd);
 }
 /*
-#include <stdlib.h>
 int main(int argc, char **argv)
 {
 	(void) argc;

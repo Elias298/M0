@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include <stddef.h>
-
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	src_len;
@@ -39,7 +37,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 /*
 #include <string.h>
 #include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
 int main(int argc, char **argv)
 {

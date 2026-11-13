@@ -6,13 +6,13 @@
 /*   By: esaliba <esaliba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/02 20:28:34 by esaliba           #+#    #+#             */
-/*   Updated: 2026/11/13 02:38:49 by esaliba          ###   ########.fr       */
+/*   Updated: 2026/11/13 03:00:12 by esaliba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	itoa_recur(int nb, char *buf, int depth)
+static int	itoa_recur(int nb, char *buf, int depth)
 {
 	char	*nums;
 	int		end;
@@ -45,7 +45,6 @@ char	*ft_itoa(int nb)
 	return (ft_strdup(buf));
 }
 /*
-#include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 int main(int argc, char **argv) {

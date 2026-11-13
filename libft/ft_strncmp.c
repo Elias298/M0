@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include <stddef.h>
-
 int	ft_strncmp(const char s1[], const char s2[], size_t n)
 {
 	if (! n)
@@ -29,7 +27,6 @@ int	ft_strncmp(const char s1[], const char s2[], size_t n)
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 int main(int argc, char **argv){
